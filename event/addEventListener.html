@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Result : <span id="res"></span></h2>
+    <button id="add">add</button>
+    <button id="sub">sub</button>
+    <button id="mul">mul</button>
+    <button id="div">div</button>
+    <script>
+        const n1 = 10;
+        const n2 = 5;
+
+        function add() {
+            const result = n1 + n2;
+            document.getElementById("res").innerText = result;
+            alert(result);
+        }
+        function sub() {
+            const result = n1 - n2;
+            document.getElementById("res").innerText = result;
+            alert(result);
+        }
+        function mul() {
+            const result = n1 * n2;
+            document.getElementById("res").innerText = result;
+            alert(result);
+        }
+        function div() {
+            const result = n1 / n2;
+            document.getElementById("res").innerText = result;
+            alert(result);
+        }
+
+        const addBtn = document.getElementById("add");
+        const subBtn = document.getElementById("sub");
+        const mulBtn = document.getElementById("mul");
+        const divBtn = document.getElementById("div");
+
+        addBtn.addEventListener("click", add);
+        subBtn.addEventListener("click", sub);
+        mulBtn.addEventListener("click", mul);
+        divBtn.addEventListener("click", div);
+    </script>
+</body>
+
+</html>

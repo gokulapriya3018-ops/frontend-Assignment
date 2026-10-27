@@ -18,6 +18,20 @@
         h1, h2, h3 {
             color: #1e3a8a;
             margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 4px;
         }
 
         a {
@@ -28,9 +42,20 @@
             background-color: #ffffff;
             border: 2px solid #2563eb;
             border-radius: 8px;
-            padding: 20px;
+            padding: 20px 24px;
             margin-bottom: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2563eb;
+            flex-shrink: 0;
         }
 
         .card {
@@ -45,14 +70,17 @@
 
 <body>
     <header id="header">
-        <h1>GOKULA PRIYA K</h1>
-        <p>
-            Email: <a href="mailto:gokulapriya3018@gmail.com">gokulapriya3018@gmail.com</a> |
-            LinkedIn: <a href="https://www.linkedin.com/in/gokula-priya-80a378374/"
-                target="_blank">linkedin.com/in/gokula-priya-80a378374</a> |
-            Portfolio: <a href="https://gokulapriya3018-ops.github.io/Personal-Portfolio/"
-                target="_blank">gokulapriya3018-ops.github.io/Personal-Portfolio</a>
-        </p>
+        <img src="profile.jpg" alt="Gokula Priya K">
+        <div>
+            <h1>GOKULA PRIYA K</h1>
+            <p>
+                Email: <a href="mailto:gokulapriya3018@gmail.com">gokulapriya3018@gmail.com</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/gokula-priya-80a378374/"
+                    target="_blank">linkedin.com/in/gokula-priya-80a378374</a><br>
+                Portfolio: <a href="https://gokulapriya3018-ops.github.io/Personal-Portfolio/"
+                    target="_blank">gokulapriya3018-ops.github.io/Personal-Portfolio</a>
+            </p>
+        </div>
     </header>
     <section class="card">
         <h2>SUMMARY</h2>
