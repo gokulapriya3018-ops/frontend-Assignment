@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokula Priya K - Resume</title>
+    <title>Gokula Priya K - Full Stack Developer | Resume</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,295 +13,332 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f1f5f9;
-            color: #334155;
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
             line-height: 1.6;
-            padding: 30px 15px;
+            color: #333333;
+            background-color: #f4f6f8;
+            padding: 24px 16px;
         }
 
         .resume-container {
             max-width: 820px;
             margin: 0 auto;
-            background: #ffffff;
+            background-color: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 35px 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 28px 32px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
 
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #e2e8f0;
+        .resume-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
             padding-bottom: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
         }
 
-        .header h1 {
-            color: #0f172a;
-            font-size: 26px;
+        .avatar-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2563eb;
+            flex-shrink: 0;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .candidate-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
             letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
-        .header p {
-            color: #2563eb;
+        .candidate-role {
+            font-size: 15px;
             font-weight: 600;
-            font-size: 16px;
+            color: #2563eb;
             margin-bottom: 10px;
         }
 
-        .links {
+        .contact-links {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            font-size: 14px;
+            gap: 8px 14px;
         }
 
-        .links a {
+        .contact-item {
+            font-size: 13px;
+            color: #4b5563;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-item a {
             color: #2563eb;
             text-decoration: none;
-            font-weight: 500;
         }
 
-        .links a:hover {
+        .contact-item a:hover {
             text-decoration: underline;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
-        .section h2 {
+        .section-title {
             font-size: 16px;
-            color: #1e293b;
+            font-weight: 700;
+            color: #1e3a8a;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border-bottom: 2px solid #2563eb;
-            display: inline-block;
-            padding-bottom: 4px;
+            padding-bottom: 6px;
             margin-bottom: 12px;
+            border-bottom: 1px solid #dbeafe;
         }
 
-        .section p {
-            font-size: 14.5px;
-            color: #475569;
+        .section-text {
+            font-size: 13.5px;
+            color: #4b5563;
+            line-height: 1.6;
+            text-align: justify;
         }
 
         .skills-list {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 8px;
-            list-style: none;
-            padding: 0;
-            margin-top: 5px;
         }
 
-        .skill-item {
-            background-color: #eff6ff;
-            color: #1d4ed8;
-            border: 1px solid #bfdbfe;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13.5px;
-            font-weight: 500;
-        }
-
-        .card {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid #2563eb;
-            border-radius: 6px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-        }
-
-        .card-header {
+        .skill-category-row {
             display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-            font-size: 15px;
-            color: #0f172a;
-        }
-
-        .card-sub {
-            color: #64748b;
+            align-items: baseline;
+            gap: 10px;
             font-size: 13.5px;
-            margin: 4px 0 8px 0;
         }
 
-        .details-list {
-            padding-left: 20px;
-            margin: 0;
+        .skill-category-title {
+            font-weight: 700;
+            color: #1f2937;
+            min-width: 90px;
         }
 
-        .details-list li {
-            font-size: 14px;
-            color: #475569;
-            margin-bottom: 4px;
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        th {
+        .skill-tag {
             background-color: #f1f5f9;
             color: #1e293b;
             border: 1px solid #cbd5e1;
-            padding: 10px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        td {
-            border: 1px solid #cbd5e1;
-            padding: 10px;
-            color: #475569;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        .slideshow-box {
-            position: relative;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid #2563eb;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            min-height: 150px;
-        }
-
-        .slide-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .slide-title {
-            font-size: 15.5px;
-            font-weight: 700;
-            color: #1e3a8a;
-        }
-
-        .slide-counter {
-            font-size: 12px;
-            font-weight: 600;
-            background: #eff6ff;
-            color: #1d4ed8;
-            padding: 2px 8px;
-            border-radius: 12px;
-            border: 1px solid #bfdbfe;
-        }
-
-        .slide-tech {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .tech-tag {
-            background: #f1f5f9;
-            color: #475569;
-            font-size: 12px;
-            padding: 2px 8px;
             border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 12.5px;
             font-weight: 500;
         }
 
-        .slide-desc {
-            font-size: 14px;
-            color: #475569;
-            line-height: 1.5;
-            margin-bottom: 15px;
+        .entry-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 3px solid #2563eb;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
         }
 
-        .slide-controls {
+        .entry-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 12px;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 4px;
         }
 
-        .slide-btn {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 6px 14px;
-            border-radius: 6px;
-            cursor: pointer;
+        .entry-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .entry-date {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        .entry-subtitle {
             font-size: 13px;
             font-weight: 600;
-            transition: background 0.2s;
+            color: #2563eb;
+            margin-bottom: 6px;
         }
 
-        .slide-btn:hover {
-            background: #1d4ed8;
+        .entry-desc {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 6px;
         }
 
-        .slide-dots {
+        .entry-bullets {
+            padding-left: 18px;
+            margin-top: 6px;
+        }
+
+        .entry-bullets li {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        .tech-pills {
             display: flex;
-            gap: 8px;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
         }
 
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #cbd5e1;
-            cursor: pointer;
-            transition: all 0.2s;
+        .tech-tag {
+            font-size: 11.5px;
+            font-weight: 600;
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            border-radius: 3px;
+            padding: 2px 6px;
+        }
+
+        .badge-tag {
             display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
         }
 
-        .dot.active {
-            background: #2563eb;
-            transform: scale(1.25);
+        .badge-gold {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+
+        .badge-bronze {
+            background-color: #ffedd5;
+            color: #9a3412;
+            border: 1px solid #fed7aa;
+        }
+
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .edu-table th,
+        .edu-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+
+        .edu-table th {
+            background-color: #f8fafc;
+            color: #1e3a8a;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .edu-table tr:nth-child(even) {
+            background-color: #fcfdfe;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .edu-col {
+            color: #4b5563;
+        }
+
+        .edu-duration {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        @media (max-width: 650px) {
+            .resume-container {
+                padding: 18px 16px;
+            }
+
+            .resume-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 14px;
+            }
+
+            .contact-links {
+                justify-content: center;
+            }
+
+            .skill-category-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .edu-table {
+                display: block;
+                overflow-x: auto;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <div class="resume-container" id="root"></div>
+
     <script>
         const candidateInfo = {
             name: "GOKULA PRIYA K",
             role: "Full Stack Developer",
             email: "gokulapriya3018@gmail.com",
+            phone: "+91 Chennai, India",
             linkedin: "https://www.linkedin.com/in/gokula-priya-80a378374/",
             portfolio: "https://gokulapriya3018-ops.github.io/Personal-Portfolio/",
-            summary: "Passionate Full Stack Developer with practical experience in React.js, Node.js, Express.js, and MongoDB. Skilled in building clean user interfaces, connecting REST APIs, and database handling. Quick learner eager to contribute to real-world software projects."
+            github: "https://github.com/gokulapriya3018-ops",
+            summary: "Passionate Full Stack Developer with hands-on expertise across modern React.js, Node.js, Express.js, and MongoDB/MySQL environments. Skilled in engineering responsive interfaces, designing robust RESTful APIs, and solving competitive problems in hackathons. Fast learner committed to delivering scalable, high-performance web applications."
         };
-        const allSkills = [
-            { name: "React.js", category: "frontend" }, { name: "JavaScript", category: "frontend" },
-            { name: "TypeScript", category: "frontend" }, { name: "HTML5", category: "frontend" },
-            { name: "CSS3", category: "frontend" }, { name: "Tailwind CSS", category: "frontend" },
-            { name: "Node.js", category: "backend" }, { name: "Express.js", category: "backend" },
-            { name: "MongoDB", category: "database" }, { name: "MySQL", category: "database" },
-            { name: "Git & GitHub", category: "tools" }, { name: "Postman", category: "tools" }
-        ];
+        const skillsByCategory = {
+            "Frontend": ["React.js", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Redux Toolkit"],
+            "Backend": ["Node.js", "Express.js", "REST APIs"],
+            "Database": ["MongoDB", "MySQL"],
+            "Tools": ["Git & GitHub", "Postman", "Docker Basics"]
+        };
         const experienceList = [
             {
                 role: "Full Stack Developer Intern",
                 company: "NOVITECH VIRTUAL",
-                location: "Chennai",
+                location: "Chennai, India",
                 duration: "Nov 2024 – Jan 2025",
                 points: [
-                    "Built dynamic web pages and responsive layouts using HTML, CSS, JavaScript, and React.",
-                    "Developed backend REST APIs and handled routing using Node.js and Express.",
-                    "Managed database queries and schemas with MongoDB and MySQL.",
-                    "Participated in daily debugging, testing, and team project discussions."
+                    "Engineered dynamic web components and responsive layouts using HTML5, CSS3, JavaScript, and React.js.",
+                    "Developed backend RESTful APIs and optimized route controllers using Node.js and Express.",
+                    "Designed database schemas, handled queries, and ensured data integrity utilizing MongoDB and MySQL.",
+                    "Collaborated in sprint cycles, daily debugging sessions, and code refactoring workflows."
                 ]
             },
             {
@@ -310,181 +347,173 @@
                 location: "Remote",
                 duration: "May 2024 – Jul 2024",
                 points: [
-                    "Analyzed financial datasets and stock market information to track trends.",
-                    "Cleaned raw data and created visual summary charts and reports using Excel and Python.",
-                    "Supported the analytical team with research and data documentation."
+                    "Analyzed financial datasets and equity market trends to extract strategic analytical insights.",
+                    "Cleaned unstructured data and created automated visualization charts and reports using Excel and Python.",
+                    "Assisted analytical teams in document management and market trend synthesis."
                 ]
             }
         ];
+        const projectList = [
+            {
+                title: "Project Hub – Task Management Admin Dashboard",
+                tech: ["React.js", "TypeScript", "Tailwind CSS"],
+                desc: "Developed a responsive admin dashboard with role-based authentication, full CRUD task management, interactive analytics charts, and search filtering."
+            },
+            {
+                title: "Cybersecurity Interactive Learning Platform",
+                tech: ["HTML5", "CSS3", "JavaScript", "React", "Docker"],
+                desc: "Built an educational lab platform featuring interactive cybersecurity quizzes and containerized environments for practical hands-on security training."
+            },
+        ];
+        const certificationsList = [
+            {
+                title: "Anna Violet College Hackathon",
+                badge: "1st Place Winner",
+                theme: "badge-gold",
+                organization: "Anna Violet Arts & Science College"
+            },
+            {
+                title: "SA Engineering College Hackathon",
+                badge: "3rd Place Winner",
+                theme: "badge-bronze",
+                organization: "SA Engineering College"
+            }
+        ];
+
         const educationList = [
             {
                 degree: "Master of Computer Application (MCA)",
                 college: "SA Engineering College, Chennai",
                 duration: "Aug 2025 – May 2027",
-                detail: "Pursuing 1st year with focus on Full Stack Development and Database Management."
+                detail: "Pursuing 1st year with focus on Full Stack Development, Cloud Architectures, and Database Management Systems."
             },
             {
                 degree: "Bachelor of Computer Application (BCA)",
                 college: "University of Madras | BMC College",
                 duration: "Aug 2022 – May 2025",
-                detail: "Graduated with 8.5 CGPA. Served as Technical Coordinator in student association."
+                detail: "Graduated with 8.5 CGPA. Served as Technical Coordinator organizing inter-college hackathons and code challenges."
             }
         ];
-        const divContainer = document.getElementById("root")
-        const getResumeHTML = () => {
-            const frontendSkills = allSkills.filter((item) => {
-                return item.category === "frontend";
-            });
-            const skillsHTML = frontendSkills.map((item) => {
-                return `<li class="skill-item">${item.name}</li>`;
-            }).join("");
-            const expHTML = experienceList.map((exp) => {
-                const pointsList = exp.points.map((pt) => `<li>${pt}</li>`).join("");
-                return `
-                    <div class="card">
-                        <div class="card-header">
-                            <span>${exp.role} - ${exp.company}</span>
-                            <span>${exp.duration}</span>
-                        </div>
-                        <div class="card-sub">${exp.location}</div>
-                        <ul class="details-list">
-                            ${pointsList}
-                        </ul>
-                    </div>
-                `;
-            }).join("");
-            const eduRows = educationList.map((edu) => {
-                return `
-                    <tr>
-                        <td style="border: 1px solid #ccc; padding: 8px;">${edu.degree}</td>
-                        <td style="border: 1px solid #ccc; padding: 8px;">${edu.college}</td>
-                        <td style="border: 1px solid #ccc; padding: 8px;">${edu.duration}</td>
-                        <td style="border: 1px solid #ccc; padding: 8px;">${edu.detail}</td>
-                    </tr>
-                `;
-            }).join("");
-
-            const eduHTML = `
-                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-                    <thead>
-                        <tr style="background-color: #f2f2f2; text-align: left;">
-                            <th style="border: 1px solid #ccc; padding: 8px;">Degree</th>
-                            <th style="border: 1px solid #ccc; padding: 8px;">College</th>
-                            <th style="border: 1px solid #ccc; padding: 8px;">Duration</th>
-                            <th style="border: 1px solid #ccc; padding: 8px;">Detail</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${eduRows}
-                    </tbody>
-                </table>
-            `;
-            return `
-                <div class="resume-container">
-                    <div class="header" style="text-align: center;">
-                        <h1>${candidateInfo.name}</h1>
-                        <p style="color: #2563eb; font-weight: bold; margin-bottom: 5px;">${candidateInfo.role}</p>
-                        <div class="links">
-                            <span>${candidateInfo.email}</span>
-                            <span> <a href="${candidateInfo.linkedin}" target="_blank">LinkedIn</a></span>
-                            <span> <a href="${candidateInfo.portfolio}" target="_blank">Portfolio</a></span>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>SUMMARY</h2>
-                        <p>${candidateInfo.summary}</p>
-                    </div>
-
-                    <div class="section">
-                        <h2>FRONTEND SKILLS</h2>
-                        <ul class="skills-list">
-                            ${skillsHTML}
-                        </ul>
-                    </div>
-
-                    <div class="section">
-                        <h2>EXPERIENCE</h2>
-                        ${expHTML}
-                    </div>
-
-                    <div class="section">
-                        <h2>FEATURED PROJECTS</h2>
-                        <div id="slideshow-content" class="slideshow-box"></div>
-                    </div>
-
-                    <div class="section">
-                        <h2>EDUCATION</h2>
-                        ${eduHTML}
+        const renderResume = () => {
+            const root = document.getElementById("root");
+            if (!root) return;
+            const skillsHTML = Object.entries(skillsByCategory).map(([category, skills]) => `
+                <div class="skill-category-row">
+                    <span class="skill-category-title">${category}:</span>
+                    <div class="skill-pills">
+                        ${skills.map(s => `<span class="skill-tag">${s}</span>`).join("")}
                     </div>
                 </div>
+            `).join("");
+            const expHTML = experienceList.map(exp => `
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <span class="entry-title">${exp.role}</span>
+                        <span class="entry-date">${exp.duration}</span>
+                    </div>
+                    <div class="entry-subtitle"> ${exp.company} • ${exp.location}</div>
+                    <ul class="entry-bullets">
+                        ${exp.points.map(pt => `<li>${pt}</li>`).join("")}
+                    </ul>
+                </div>
+            `).join("");
+            const projectsHTML = projectList.map(proj => `
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <span class="entry-title">${proj.title}</span>
+                    </div>
+                    <p class="entry-desc">${proj.desc}</p>
+                    <div class="tech-pills">
+                        ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join("")}
+                    </div>
+                </div>
+            `).join("");
+            const hackathonsHTML = certificationsList.map(cert => `
+                <div class="entry-card">
+                    <div class="entry-header">
+                        <span class="entry-title">${cert.title}</span>
+                        <span class="badge-tag ${cert.theme}">${cert.badge}</span>
+                    </div>
+                    <div class="entry-subtitle">${cert.organization}</div>
+                </div>
+            `).join("");
+            const eduRows = educationList.map(edu => `
+                <tr>
+                    <td style="width: 28%;"><span class="edu-degree">${edu.degree}</span></td>
+                    <td style="width: 27%;"><span class="edu-col"> ${edu.college}</span></td>
+                    <td style="width: 17%;"><span class="edu-duration">${edu.duration}</span></td>
+                    <td style="width: 28%;">${edu.detail}</td>
+                </tr>
+            `).join("");
+            root.innerHTML = `
+                <!-- Header -->
+                <header class="resume-header">
+                    <div class="header-info">
+                        <h1 class="candidate-name">${candidateInfo.name}</h1>
+                        <div class="candidate-role">${candidateInfo.role}</div>
+                        <div class="contact-links">
+                            <span class="contact-item"> <a href="mailto:${candidateInfo.email}">${candidateInfo.email}</a></span>
+                            <span class="contact-item"> ${candidateInfo.phone}</span>
+                            <span class="contact-item"> <a href="${candidateInfo.linkedin}" target="_blank">LinkedIn</a></span>
+                            <span class="contact-item"> <a href="${candidateInfo.portfolio}" target="_blank">Portfolio</a></span>
+                            <span class="contact-item"> <a href="${candidateInfo.github}" target="_blank">GitHub</a></span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Professional Summary -->
+                <section class="section">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p class="section-text">${candidateInfo.summary}</p>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-list">
+                        ${skillsHTML}
+                    </div>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="section">
+                    <h2 class="section-title">Work Experience</h2>
+                    ${expHTML}
+                </section>
+
+                <!-- Featured Projects -->
+                <section class="section">
+                    <h2 class="section-title">Featured Projects</h2>
+                    ${projectsHTML}
+                </section>
+
+                <!-- Hackathons & Achievements -->
+                <section class="section">
+                    <h2 class="section-title">Hackathons & Achievements</h2>
+                    ${hackathonsHTML}
+                </section>
+
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <table class="edu-table">
+                        <thead>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Institution</th>
+                                <th>Duration</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${eduRows}
+                        </tbody>
+                    </table>
+                </section>
             `;
         };
-        divContainer.innerHTML = getResumeHTML() ?? "";
 
-        // Slideshow Data & Interactive Logic
-        const projectList = [
-            {
-                title: "Project Hub – Task Management Admin Dashboard",
-                tech: ["React.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
-                desc: "Developed a responsive admin dashboard with role-based authentication, full CRUD task management, and interactive analytics charts."
-            },
-            {
-                title: "Cybersecurity Interactive Learning Platform",
-                tech: ["HTML5", "CSS3", "JavaScript", "Docker"],
-                desc: "Built an educational lab platform featuring interactive cybersecurity quizzes and containerized environments for practical training."
-            },
-            {
-                title: "Online Shopping E-Commerce Website",
-                tech: ["JavaScript", "HTML5", "CSS3", "Local Storage"],
-                desc: "Created a storefront application featuring instant product filtering, shopping cart state management, and persistent local storage."
-            }
-        ];
-
-        let currentSlide = 0;
-
-        function updateSlideUI() {
-            const slide = projectList[currentSlide];
-            const techHTML = slide.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("");
-            const dotsHTML = projectList.map((_, i) => `
-                <span class="dot ${i === currentSlide ? 'active' : ''}" onclick="goToSlide(${i})"></span>
-            `).join("");
-
-            const container = document.getElementById("slideshow-content");
-            if (!container) return;
-
-            container.innerHTML = `
-                <div class="slide-header">
-                    <span class="slide-title">${slide.title}</span>
-                    <span class="slide-counter">${currentSlide + 1} of ${projectList.length}</span>
-                </div>
-                <div class="slide-tech">${techHTML}</div>
-                <p class="slide-desc">${slide.desc}</p>
-                <div class="slide-controls">
-                    <button class="slide-btn" onclick="prevSlide()">❮ Prev</button>
-                    <div class="slide-dots">${dotsHTML}</div>
-                    <button class="slide-btn" onclick="nextSlide()">Next ❯</button>
-                </div>
-            `;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % projectList.length;
-            updateSlideUI();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + projectList.length) % projectList.length;
-            updateSlideUI();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlideUI();
-        }
-
-        // Initialize slideshow
-        updateSlideUI();
+        renderResume();
     </script>
 </body>
 
